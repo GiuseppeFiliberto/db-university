@@ -34,7 +34,8 @@ per ogni appello d'Esame a cui lo Studente ha partecipato, è necessario memoriz
 **Columsn**
 - id (INT, primary key)
 - name (VARCHAR(255), NOT NULL)
-- department_id (INT, foreign key references Departments(id), NOT NULL)
+- students_id (INT, foreign key references Students(id), NOT NULL)
+- degree_courses_id (INT, foreign key references Departments(id), NOT NULL)
 - description (TEXT, NOT NULL)
 
 
@@ -58,6 +59,7 @@ per ogni appello d'Esame a cui lo Studente ha partecipato, è necessario memoriz
 - phone (VARCHAR(20), NOT NULL)
 - degree_course_id (INT, foreign key references Degree_Courses(id), NOT NULL)
 - enrollment_date (DATE, NOT NULL)
+- payment_status (enum('Paid', 'Unpaid'), NOT NULL) # Paid or Unpaid
 
 ## Exams
 **Columsn**
